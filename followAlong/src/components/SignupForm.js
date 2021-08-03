@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
-
+import useForm from "../hooks/useForm";
 import Button from "../theme/Button";
 
 const useLocalStorage = (key, initialValue) => {
@@ -32,23 +32,23 @@ const useLocalStorage = (key, initialValue) => {
 //3. Return the needed pieces of state/functions.
 //4. Use useForm instead of hardcoded stateful logic.
 
-const useForm = (initialState) => {
-  const [values, setValues] = useLocalStorage('form', initialState);
+// const useForm = (initialState) => {
+//   const [values, setValues] = useLocalStorage('form', initialState);
 
-  const handleChanges = e => {
-    setValues({
-      ...values,
-      [e.target.name]: e.target.value
-    });
-  };
+//   const handleChanges = e => {
+//     setValues({
+//       ...values,
+//       [e.target.name]: e.target.value
+//     });
+//   };
 
-  const clearForm = e => {
-    e.preventDefault();
-    setValues(initialState);
-  };
+//   const clearForm = e => {
+//     e.preventDefault();
+//     setValues(initialState);
+//   };
 
-  return ([values, handleChanges, clearForm]);
-}
+//   return ([values, handleChanges, clearForm]);
+// }
 
 const initialState = {
   firstName: "",
