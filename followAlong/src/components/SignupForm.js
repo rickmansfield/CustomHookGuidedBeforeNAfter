@@ -5,11 +5,11 @@ import useForm from "../hooks/useForm";
 import Button from "../theme/Button";
 
 const useLocalStorage = (key, initialValue) => {
-  //1. Setup useState.
-  //2. CHeck to see if a value for the key exists in localStorage
+  //1. Setup useState. Get initial Value
+  //2. CHeck to see if a value for the key exists in localStorage (LS)
   //3. if a value does exist in LS, put it into state
   //4. if a value does not exist in LS, put initialValue into LS
-  //5. when setting state, also save value to LS
+
   const [value, setValue] = useState(() => {
     if (localStorage.getItem(key)) {
       return (JSON.parse(localStorage.getItem(key)));
@@ -18,7 +18,7 @@ const useLocalStorage = (key, initialValue) => {
       return initialValue;
     }
   });
-
+  //5. when setting state, also save value to LS
   const setStoredValue = (value) => {
     localStorage.setItem(key, JSON.stringify(value));
     setValue(value);
@@ -59,6 +59,7 @@ const initialState = {
 export default function SignupForm() {
   const classes = useStyles();
   const [values, handleChanges, clearForm] = useForm(initialState);
+  //const [name, setName] = useLocalStorage("name", "Rick")
 
   console.log('values: ', values);
 
@@ -69,6 +70,10 @@ export default function SignupForm() {
 
   return (
     <div p={2} className="form">
+
+      {/* <h3>{name}</h3>
+      <button onClick={()=>{SVGAnimateTransformElement("Sara");}}></button> */}
+
       <form onSubmit={handleSubmit}>
         <fieldset>
           <legend>Add New Client</legend>
