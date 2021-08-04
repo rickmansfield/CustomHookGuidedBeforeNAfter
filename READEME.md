@@ -24,3 +24,7 @@
   - Subcomponents (Presentaional Logic)
   - Services (Data Logic)
   - Custom Hooks (Stateful Logic)
+
+## Kinds of Logic
+    - Presentational
+    - 
