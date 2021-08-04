@@ -21,10 +21,11 @@
   - TEST = test that app works the same as before. 
 
 ## Modularizing Components
-  - Subcomponents (Presentaional Logic)
-  - Services (Data Logic)
-  - Custom Hooks (Stateful Logic)
+  - Subcomponents (Presentaional Logic | Shows that data)
+  - Services (Data Logic | get data from server)
+  - Custom Hooks (Stateful Logic | set that data to our states )
 
 ## Kinds of Logic
-    - Presentational
-    - 
+    - Presentational (stateless)
+    - Data Logic (accessing)
+    - Stateful Logic (Manipulate saving)
