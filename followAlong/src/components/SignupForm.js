@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import TextField from "@material-ui/core/TextField";
-import useForm from "../hooks/useForm";
-import Button from "../theme/Button";
+// import React, { useState } from "react";
+// import { makeStyles } from "@material-ui/core/styles";
+// import TextField from "@material-ui/core/TextField";
+// import useForm from "../hooks/useForm";
+// import Button from "../theme/Button";
 
 // const useLocalStorage = (key, initialValue) => {
 //   //1. Setup useState. Get initial Value
@@ -49,6 +49,11 @@ import Button from "../theme/Button";
 
 //   return ([values, handleChanges, clearForm]);
 // }
+import React, { useState } from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import TextField from "@material-ui/core/TextField";
+import useForm from "../hooks/useForm";
+import Button from "../theme/Button";
 
 const initialState = {
   firstName: "",
