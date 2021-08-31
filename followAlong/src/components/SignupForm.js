@@ -66,9 +66,11 @@ export default function SignupForm() {
   const [values, handleChanges, clearForm] = useForm(initialState);
   //const [name, setName] = useLocalStorage("name", "Rick")
 
-  console.log('values: ', values);
+  console.log('SignupForm.js values: ', values);
 
   const handleSubmit = e => {
+    // console.log('SignUpForm.js e.target.value', e.target.value);
+    // console.log('SignUpForm.js e.target.name', e.target.name);
     e.preventDefault();
     alert(values.firstName + ' ' + values.lastName + ' ' + values.email);
   };

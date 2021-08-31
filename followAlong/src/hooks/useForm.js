@@ -1,8 +1,14 @@
 import { useState } from 'react';
 import useLocalStorage from './useLocalStorage';
+const initialState = {
+    firstName: "",
+    lastName: "",
+    email: ""
+}
 const useForm = (initialState) => {
     // const [values, setValues] = useState(initialValues)
     const [values, setValues] = useLocalStorage('form', initialState);
+    console.log('useForm.js values: ', values);
     const handleChanges = e => {
         setValues({
             ...values,
@@ -18,11 +24,7 @@ const useForm = (initialState) => {
     return ([values, handleChanges, clearForm]);
 }
 
-const initialState = {
-    firstName: "",
-    lastName: "",
-    email: ""
-}
+
 
 export default useForm;
 
